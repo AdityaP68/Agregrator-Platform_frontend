@@ -1,0 +1,58 @@
+
+@font-face {
+  font-family: "acf-bold";
+  src: url("../public/fonts/articulat/acf_bold.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-demibold";
+  src: url("../public/fonts/articulat/acf_demibold.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-medium";
+  src: url("../public/fonts/articulat/acf_medium.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-light";
+  src: url("../public/fonts/articulat/acf_light.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-el";
+  src: url("../public/fonts/articulat/acf_extralight.otf");
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+  }
+  body {
+  }
+}
