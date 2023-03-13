@@ -1,6 +1,10 @@
 import React from "react";
-import Sidebar from "../Sidebar";
+import Link from "next/link";
 import styles from './Login.module.scss'
+import Sidebar from "../Sidebar";
+import RegisterForm from "../Register/RegisterForm";
+import LoginForm from "./LoginForm";
+
 
 function Login() {
   return (
@@ -9,13 +13,31 @@ function Login() {
         <Sidebar />
       </aside>
       <main className={styles.main}>
-        <div className={styles.formHeading}>
-            <h1>Sign Up</h1>
-            <span>Have an account already? login</span>
+        <div className={styles.mainFormWrapper}>
+          <div className={styles.formHeading}>
+            <h1>Sign In</h1>
+            <span>
+              New to this space? Create your account{" "}
+              <Link href={"/register"}>
+                <span className={styles.link}>here</span>
+              </Link>
+            </span>
+          </div>
+          <div className={styles.typeSelectWrapper}>
+            <h4>Your Role is?</h4>
+            <div className={styles.typeContainer}>
+              <div className={styles.type} tabIndex={1}>
+                <input type="radio" />
+                <span>NGO</span>
+              </div>
+              <div className={styles.type} tabIndex={1}>
+                <input type="radio" />
+                <span>User</span>
+              </div>
+            </div>
+          </div>
+          <LoginForm/>
         </div>
-        <form>
-
-        </form>
       </main>
     </div>
   );

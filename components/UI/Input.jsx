@@ -6,7 +6,7 @@ function Input({ label, placeholder, fieldType, required }) {
     <div className={styles.inputWrapper}>
       <label>{label}</label>
       <input type={fieldType} placeholder={placeholder} required={required} />
-      <span className={styles.errorText}>*error text</span>
+      {/* <span className={styles.errorText}>*error text</span> */}
     </div>
   );
 }

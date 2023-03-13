@@ -16,9 +16,9 @@
     max-height: 100vh;
     overflow: auto;
     padding: 1rem;
-    .mainFormWrapper{
-        width: 80%;
-        margin-top: 4rem;
+    .mainFormWrapper {
+      width: 80%;
+      margin: 4rem 0;
     }
     .formHeading {
       h1 {
@@ -52,6 +52,7 @@
     margin-top: 0.9rem;
 
     .type {
+      cursor: pointer;
       border: 2px solid #b6baca;
       color: #3a38ff;
       padding: 1.2rem;
@@ -71,6 +72,7 @@
         border-color: #3a38ff;
         color: #3a38ff;
       }
+      
     }
   }
 }

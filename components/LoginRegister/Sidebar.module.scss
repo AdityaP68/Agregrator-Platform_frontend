@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: var(--primary-purple);
+  background-color: var(--primary-color);
   color: #ffffff;
   min-height: 100%;
   //border-radius: 0 1rem 1rem 0;
@@ -46,7 +46,7 @@
   }
   .sidebarFooter {
     width: 100%;
-    background-color: var(--dark-primary);
+    background-color: var(--primary-dark);
     border-radius: 1rem;
     padding: 1.6rem 1.2rem 1.3rem 1.2rem;
     p{
@@ -60,7 +60,7 @@
         height: 45px;
         width: 45px;
         border-radius: 0.5rem;
-        background-color: #bab8fd;
+        background-color: var(--off-purple);
         margin-top: 1.2rem;
         display: flex;
         align-items: center;

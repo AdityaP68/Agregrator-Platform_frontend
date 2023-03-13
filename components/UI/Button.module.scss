@@ -1,0 +1,13 @@
+.btn{
+    background-color: var(--primary-color);
+    font-family: acf-medium;
+    padding: 1rem;
+    color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--primary-hover);
+    }
+}
