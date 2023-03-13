@@ -1,3 +1,9 @@
+:root{
+  --primary-purple: #3c37ff;
+  --dark-primary: #2520e3;
+  --off-purple: #bab8fd;
+}
+
 
 @font-face {
   font-family: "acf-bold";
@@ -26,6 +32,30 @@
 @font-face {
   font-family: "acf-el";
   src: url("../public/fonts/articulat/acf_extralight.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-heavy";
+  src: url("../public/fonts/articulat/acf-heavy.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-reg";
+  src: url("../public/fonts/articulat/acf-reg.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-norm";
+  src: url("../public/fonts/articulat/acf-normal.otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "acf-thin";
+  src: url("../public/fonts/articulat/acf-thin.otf");
   font-style: normal;
   font-display: swap;
 }
