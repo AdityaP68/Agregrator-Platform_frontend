@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Sidebar.module.scss";
 import Image from "next/image";
-import logo from "../../public/images/logo.png";
 import logo2 from "../../public/images/logo2.png";
 
 function FormSidebar() {
@@ -9,7 +8,7 @@ function FormSidebar() {
     <div className={styles.sidebar}>
       <div className={styles.sidebarHeader}>
         <div className={styles.logo}>
-          <Image src={logo2} height={35} />
+          <Image src={logo2} height={35} alt={"aggregator"}/>
         </div>
         Aggregator
       </div>

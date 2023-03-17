@@ -8,7 +8,7 @@ function Sidebar() {
     <div className={styles.container}>
       <div className={styles.sidebarContentWrapper}>
         <div className={styles.logo}>
-          <Image src={logoImg} height={40} />
+          <Image src={logoImg} height={40} alt={"aggregrator"} />
           <span>Aggregator</span>
         </div>
       </div>
