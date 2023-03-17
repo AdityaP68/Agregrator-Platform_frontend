@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from './Login.module.scss'
-import Sidebar from "../Sidebar";
-import RegisterForm from "../Register/RegisterForm";
+import FormSidebar from "../FormSidebar";
 import LoginForm from "./LoginForm";
 
 
@@ -10,7 +9,7 @@ function Login() {
   return (
     <div className={styles.container}>
       <aside className={styles.aside}>
-        <Sidebar />
+        <FormSidebar />
       </aside>
       <main className={styles.main}>
         <div className={styles.mainFormWrapper}>

@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Register.module.scss";
-import Sidebar from "../Sidebar";
+import FormSidebar from "../FormSidebar";
 import RegisterForm from "./RegisterForm";
 
 function Register() {
   return (
     <div className={styles.container}>
       <aside className={styles.aside}>
-        <Sidebar />
+        <FormSidebar />
       </aside>
       <main className={styles.main}>
         <div className={styles.mainFormWrapper}>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "../../public/images/logo.png";
 import logo2 from "../../public/images/logo2.png";
 
-function Sidebar() {
+function FormSidebar() {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebarHeader}>
@@ -34,4 +34,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default FormSidebar;
