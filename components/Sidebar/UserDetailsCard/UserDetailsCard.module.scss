@@ -1,0 +1,68 @@
+.cardContainer {
+  background-color: var(--grey-shade1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: acf-medium;
+  padding: 1rem;
+  .cardItemRow1 {
+    display: flex;
+    gap: 0.9rem;
+  }
+  .profileImgWrapper {
+    position: relative;
+    .greendot {
+      height:9px;
+      width: 9px;
+      background-color: #76c66e;
+      border: 1px solid var(--grey-shade1);
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left:29px;
+    }
+    .profileImg {
+      height: 37px;
+      width: 37px;
+      background-color: gray;
+      border-radius: 50%;
+      overflow: hidden;
+
+    }
+  }
+}
+.userdetails {
+  p {
+    font-family: acf-demibold;
+    font-size: 0.8rem;
+    .verifiedTick {
+      position: relative;
+      top: 2.5px;
+      margin-left: 4px;
+    }
+  }
+  .username {
+    color: #b2b2b2;
+    font-size: 0.7rem;
+  }
+}
+
+.cardItemRow2 {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  .userStatsItem {
+    text-align: center;
+    width: 52px;
+    .stat {
+      font-family: acf-demibold;
+      font-size: 0.85rem;
+    }
+    .statType {
+      color: #b2b2b2;
+      font-size: 0.7rem;
+      text-transform: capitalize;
+    }
+  }
+}

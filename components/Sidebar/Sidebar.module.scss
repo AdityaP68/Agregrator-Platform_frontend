@@ -10,10 +10,11 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    span {
-      font-family: acf-bold;
+    .logoTitle {
+      font-family: acf-demibold;
       text-transform: uppercase;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
       color: var(--matte-black);
     }
   }
