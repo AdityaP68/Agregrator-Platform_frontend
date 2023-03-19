@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./Sidebar.module.scss";
 import UserDetailsCard from "./UserDetailsCard/UserDetailsCard";
 import logoImg from "../../public/images/logo3.png";
+import SidebarNavMenu from "./SidebarNavMenu/SidebarNavMenu";
 
 function Sidebar() {
   return (
@@ -13,6 +14,7 @@ function Sidebar() {
           <span className={styles.logoTitle}>Aggregator</span>
         </div>
         <UserDetailsCard/>
+        <SidebarNavMenu/>
       </div>
     </div>
   );

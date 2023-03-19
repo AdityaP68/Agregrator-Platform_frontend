@@ -1,0 +1,39 @@
+.linkWrapperSM {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  .squareLinkIcon {
+    height: 25px;
+    width: 25px;
+    background-color: var(--grey-shade-links);
+    border-radius: 5px;
+  }
+  .circularLinkIcon {
+    height: 28px;
+    width: 28px;
+    background-color: var(--grey-shade-links);
+    border-radius: 50%;
+  }
+  .linkTitle {
+    font-family: acf-medium;
+    // color: var(--grey-shade-links);
+    font-size: 0.7rem;
+  }
+}
+
+.linkWrapperMD {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  .squareLinkIcon {
+    height: 25px;
+    width: 25px;
+    background-color: var(--grey-shade-links);
+    border-radius: 50%;
+  }
+  .linkTitle {
+    font-family: acf-medium;
+    color: var(--grey-shade-links);
+    font-size: 0.7rem;
+  }
+}

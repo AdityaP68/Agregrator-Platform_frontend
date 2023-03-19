@@ -1,15 +1,10 @@
 import styles from './Home.module.scss'
-import Sidebar from '../components/Sidebar/Sidebar'
+import HomeLayout from '../components/Layouts/HomeLayout'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <aside className={styles.aside}>
-        <Sidebar/>
-      </aside>
-      <main className={styles.main}>
-
-      </main>
-    </div>
+    <HomeLayout>
+      omkie
+    </HomeLayout>
   )
 }

@@ -1,0 +1,23 @@
+.listContainer{
+    h6{
+        font-size: 0.7rem;
+        font-family: acf-medium;
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        .expandText{
+            color: var(--primary-color);
+            display: block;
+            font-family: acf-reg;
+            font-size: 0.65rem;
+            align-items: baseline;
+            margin-right: 5px;
+        }
+    }
+    .list{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

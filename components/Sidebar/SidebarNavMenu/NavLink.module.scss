@@ -1,0 +1,19 @@
+.linkWrapper{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    .linkIcon{
+        height: 30px;
+        width: 30px;
+        background-color: var(--grey-shade-links);
+        display: block;
+        border-radius: 6px;
+    }
+    .linkTitle{
+        font-family: acf-medium;
+        text-transform: capitalize;
+        color: var(--grey-shade-links);
+    }
+}

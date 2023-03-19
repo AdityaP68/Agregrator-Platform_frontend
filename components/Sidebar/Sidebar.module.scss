@@ -1,10 +1,14 @@
 .container {
   min-height: 100%;
+  padding-right: 1rem;
   // width: 300px;
   // background-color: var(--base-color);
   .sidebarContentWrapper {
     margin-left: 1rem;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
   }
   .logo {
     display: flex;

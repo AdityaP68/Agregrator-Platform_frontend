@@ -1,0 +1,40 @@
+.cardBody {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(237, 237, 237);
+  padding-bottom: 0.85rem;
+
+  .cardDataWrapper {
+    .dataHeader {
+      color: #7f7f7f;
+      display: flex;
+      gap: 0.4rem;
+      text-transform: capitalize;
+      font-size: 0.7rem;
+      font-family: acf-medium;
+      align-items: center;
+      .logo {
+        height: 15px;
+        width: 15px;
+        background-color: #7f7f7f;
+        border-radius: 50%;
+      }
+    }
+    .data{
+        font-family: acf-medium;
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+    }
+  }
+  .cardIconWrapper {
+      .cardIcon{
+        background-color: var(--grey-shade-links);
+        height: 40px;
+        width: 50px;
+        border-radius: 5px;
+        
+    }
+  }
+}
