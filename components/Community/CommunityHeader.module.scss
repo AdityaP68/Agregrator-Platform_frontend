@@ -1,0 +1,60 @@
+.headerSection {
+  background-color: #ffffff;
+  height: 320px;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  .coverImageContainer {
+    height: 50%;
+    width: 100%;
+    background-color: var(--grey-shade-links);
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    .profileImageContainer {
+      //background-color: antiquewhite;
+      position: absolute;
+      bottom: 0;
+      transform: translate(12px, 35px);
+      display: flex;
+      gap: 1rem;
+      align-items: baseline;
+      .profileImage {
+        height: 55px;
+        width: 55px;
+        background-color: var(--grey-shade-links);
+        border: 3px solid #ffffff;
+        border-radius: 7px;
+      }
+      .creationDate {
+        font-family: acf-medium;
+        font-size: 0.7rem;
+        position: relative;
+        transform: translateY(-13px);
+        color: #b2b2b2;
+      }
+    }
+  }
+}
+
+.sectionContent {
+  margin-top: 3rem;
+  margin-left: 1rem;
+  .communityDetailsWrapper {
+    .communityName {
+      font-family: acf-medium;
+      font-size: 1.4rem;
+      letter-spacing: 0.5px;
+    }
+    .communityDetails {
+      font-size: 0.8rem;
+      color: #8d8d8d;
+      display: block;
+      margin-top: 0.65rem;
+    }
+  }
+}
+
+.communityTabsMenu {
+  border-top: 1px solid rgb(218, 218, 218);
+  margin-top: 1.8rem;
+}

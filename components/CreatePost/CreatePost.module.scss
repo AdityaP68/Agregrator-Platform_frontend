@@ -1,0 +1,33 @@
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  .userImg {
+    height: 45px;
+    width: 45px;
+    background-color: var(--grey-shade-links);
+    border-radius: 50%;
+  }
+  .textEditorContainer{
+      width: 100%;
+      .inputWrapper{
+        border-radius: 5px;
+        background-color: var( --off-gray);
+        padding: 0.5rem;
+        input{
+            width: 100%;
+            background-color: var( --off-gray);
+            border: none;
+            padding: 0.5rem;
+            &:focus{
+                outline: none;
+            }
+        }
+
+    }
+  }
+}
