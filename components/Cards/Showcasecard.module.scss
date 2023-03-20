@@ -1,0 +1,51 @@
+.cardContainer{
+    width: 275px;
+    height: 300px;
+    //background-color: rgb(228, 235, 255);
+   
+    .cardCover{
+        height: 180px;
+        width: 100%;
+        background-color: var(--grey-shade-links);
+    }
+    .cardContent{
+        margin-top: 0.5em;
+    }
+    .textWrapper{
+        h6{
+            font-family: acf-medium;
+            font-size: 0.8rem;
+        }
+        p{
+            margin-top: 0.4rem;
+            font-size: 0.8rem;
+            font-family: acf-reg;
+            color: var(--grey-shade-links);
+            
+        }
+    }
+    .cardFooter{
+        margin-top: 1rem;
+        background-color: #ffffff;
+        padding: 0.5rem 0;
+        border-top: 1px solid rgb(230, 230, 230);
+        border-bottom: 1px solid rgb(230, 230, 230);
+        
+        .authorDetails{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            span{
+                display: block;
+                height: 25px;
+                width: 25px;
+                background-color: var(--grey-shade-links);
+                border-radius: 50%;
+            }
+            p{
+                font-family: acf-medium;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

@@ -46,7 +46,7 @@ function Infobar() {
       <CollapsableList title={"Suggested NGOs"}>
         <NGOListItemCard />
         <NGOListItemCard />
-        <NGOListItemCard />
+        {/* <NGOListItemCard /> */}
       </CollapsableList>
     </div>
   );
