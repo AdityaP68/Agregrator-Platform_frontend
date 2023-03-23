@@ -1,17 +1,36 @@
-import React from 'react'
-import styles from './SidebarNavMenu.module.scss'
-import NavLink from './NavLink'
+import React, { useState, useMemo } from "react";
+import { useRouter } from "next/router";
+import styles from "./SidebarNavMenu.module.scss";
+import NavLink from "./NavLink";
 
 function SidebarNavMenu() {
+  const router = useRouter();
+  const activeLink = useMemo(() => {
+    return router.pathname;
+  }, [router.pathname]);
+
   return (
     <div className={styles.menu}>
-      <NavLink title="feed"/>
-      <NavLink title="discover"/>
-      <NavLink title="community"/>
-      <NavLink title="marketplace"/>
-      <NavLink title="settings"/>
+      <NavLink active={`${activeLink === "/"}`} route={"/"}>
+        feed
+      </NavLink>
+      <NavLink active={`${activeLink === "/discover"}`} route={"/discover"}>
+        discover
+      </NavLink>
+      <NavLink
+        active={`${activeLink === "/communities"}`}
+        route={"/communities"}
+      >
+        community
+      </NavLink>
+      <NavLink active={`${activeLink === "/market"}`} route={"/market"}>
+        marketplace
+      </NavLink>
+      <NavLink active={`${activeLink === "/settings"}`} route={"/settings"}>
+        settings
+      </NavLink>
     </div>
-  )
+  );
 }
 
-export default SidebarNavMenu
+export default SidebarNavMenu;

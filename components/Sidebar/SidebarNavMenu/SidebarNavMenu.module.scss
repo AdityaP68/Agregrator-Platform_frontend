@@ -1,5 +1,7 @@
-.menu{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  top: -8px;
 }
