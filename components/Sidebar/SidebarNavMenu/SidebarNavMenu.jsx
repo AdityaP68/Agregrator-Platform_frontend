@@ -9,16 +9,17 @@ function SidebarNavMenu() {
     return router.pathname;
   }, [router.pathname]);
 
+
   return (
     <div className={styles.menu}>
       <NavLink active={`${activeLink === "/"}`} route={"/"}>
         feed
       </NavLink>
-      <NavLink active={`${activeLink === "/discover"}`} route={"/discover"}>
+      <NavLink active={`${activeLink.includes("/discover")}`} route={"/discover"}>
         discover
       </NavLink>
       <NavLink
-        active={`${activeLink === "/communities"}`}
+        active={`${activeLink.includes("/communities")}`}
         route={"/communities"}
       >
         community

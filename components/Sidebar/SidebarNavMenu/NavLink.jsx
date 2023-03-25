@@ -4,7 +4,7 @@ import styles from "./NavLink.module.scss";
 
 function NavLink({ children, active, route }) {
   return (
-    <Link href={`${"/" + route}` || "#"}>
+    <Link href={ route || "#"}>
       <div
         className={`${styles.linkWrapper}  ${
           active === "true" && styles.active
