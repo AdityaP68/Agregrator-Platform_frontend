@@ -1,0 +1,36 @@
+.searchbarWrapper {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  .nameInput,
+  .categoryInput {
+    box-shadow: 1px 6px 10px #00000017;
+    font-family: acf-medium;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+
+    &:focus {
+      outline-color: var(--primary-color);
+    }
+  }
+  .nameInput {
+    width: 35%;
+    min-width: 160px;
+  }
+  .categoryInput {
+    width: 20%;
+    min-width: 120px;
+  }
+  .searchBtn {
+    border: none;
+    background-color: var(--primary-color);
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: acf-medium;
+    box-shadow: 1px 6px 10px #00000024;
+  }
+}
