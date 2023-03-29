@@ -1,6 +1,50 @@
-.postsCardWrapper{
-    background-color: #ffffff;
+.postsCardWrapper {
+  background-color: #ffffff;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  font-family: acf-medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .postHeader {
+    border-bottom: 1px solid rgb(228, 228, 228);
+    padding: 0.5rem;
+    .namecard {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      .profileImg {
+        height: 30px;
+        width: 30px;
+        background-color: var(--grey-shade-links);
+        border-radius: 50%;
+      }
+      .details {
+        .authorName {
+          font-family: acf-medium;
+          font-size: 0.8rem;
+          text-transform: capitalize;
+        }
+        .username {
+          font-family: acf-reg;
+          font-size: 0.7rem;
+          color: #949494;
+        }
+      }
+    }
+  }
+}
+
+.postContent{
+    padding:2rem;
+    font-family: acf-medium;
     width: 100%;
-    height: 350px;
-    border-radius: 10px;
+    height: 100%;
+    
+}
+.postFooter {
+    border-top: 1px solid rgb(228, 228, 228);
+    height: 30px;
+
 }
