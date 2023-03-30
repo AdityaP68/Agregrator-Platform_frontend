@@ -8,7 +8,7 @@ function FormSidebar() {
     <div className={styles.sidebar}>
       <div className={styles.sidebarHeader}>
         <div className={styles.logo}>
-          <Image src={logo2} height={35} alt={"aggregator"}/>
+          <Image src={logo2} height={35} alt={"aggregator"} />
         </div>
         Aggregator
       </div>
@@ -16,17 +16,15 @@ function FormSidebar() {
         <h1>
           Start your <span>journey with us.</span>
         </h1>
-        <p>Discover the world's best community of NGOs and contributers</p>
+        <p>Discover the world&apos;s best community of NGOs and contributers</p>
       </div>
       <div className={styles.sidebarFooter}>
         <p>
-          Simply unbelievable! I am really satisfied with this platform and it's concept. This is
-          absolutely wonderful!
+          Simply unbelievable! I am really satisfied with this platform and
+          it&apos;s concept. This is absolutely wonderful!
         </p>
         <div className={styles.authorDetailsWrapper}>
-          <div className={styles.authorImg}>
-            A
-          </div>
+          <div className={styles.authorImg}>A</div>
         </div>
       </div>
     </div>

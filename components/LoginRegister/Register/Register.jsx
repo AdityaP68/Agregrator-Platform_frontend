@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./Register.module.scss";
+import { Formik, Field, Form, FormikProps } from "formik";
 import FormSidebar from "../FormSidebar";
-import RegisterForm from "./RegisterForm";
+import ProgressStepper from "../../UI/ProgressStepper";
+import FormA from "./Forms/FormA";
 
 function Register() {
+  const [currentForm, setCurrentForm] = useState("A");
   return (
     <div className={styles.container}>
       <aside className={styles.aside}>
         <FormSidebar />
       </aside>
       <main className={styles.main}>
-        <div className={styles.mainFormWrapper}>
-          <div className={styles.formHeading}>
+        <section className={styles.formWrapper}>
+          <div className={styles.formTitle}>
             <h1>Sign Up</h1>
             <span>
               Have an account already?{" "}
@@ -21,21 +24,16 @@ function Register() {
               </Link>
             </span>
           </div>
-          <div className={styles.typeSelectWrapper}>
-            <h4>Your Role is?</h4>
-            <div className={styles.typeContainer}>
-              <div className={styles.type} tabIndex={1}>
-                <input type="radio" />
-                <span>NGO</span>
-              </div>
-              <div className={styles.type} tabIndex={1}>
-                <input type="radio" />
-                <span>User</span>
-              </div>
-            </div>
+          <div className={styles.stepper}>
+            <ProgressStepper />
           </div>
-          <RegisterForm />
-        </div>
+          <Formik>
+            
+          </Formik>
+          {currentForm === "A" && <FormA next={setCurrentForm} />}
+          {currentForm === "B" && <FormA next={setCurrentForm} />}
+          {currentForm === "C" && <FormA next={setCurrentForm} />}
+        </section>
       </main>
     </div>
   );

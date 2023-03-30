@@ -5,13 +5,13 @@
   label {
     font-family: acf-demibold;
     font-weight: 100;
-    color: #758292;
+    color: var(--fm-h-shade);
     font-size: 1.1rem;
   }
   input {
     padding: 1rem;
     border-radius: 8px;
-    border: 2px solid #d3d3d3;
+    border: 2px solid var(--border-color);
     margin-top: 0.5rem;
     color: #1c1c1c;
     font-size: 1.1rem;

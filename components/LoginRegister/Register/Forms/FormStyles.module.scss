@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    margin-top: 1.7rem;
+ }
+ .typeSelectWrapper {
+    h4 {
+        font-family: acf-demibold;
+        font-weight: 100;
+        color: var(--fm-h-shade);
+        font-size: 1.1rem;
+    }
+    .typeContainer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.9rem;
+  
+
+    }
+  }

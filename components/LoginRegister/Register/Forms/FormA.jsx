@@ -1,11 +1,19 @@
 import React from "react";
-import styles from "./RegisterForm.module.scss";
-import Input from "../../UI/Input";
-import Button from "../../UI/Button";
+import styles from "./FormStyles.module.scss";
+import Input from "../../../UI/Input";
+import Button from "../../../UI/Button";
+import TabBtn from "../../../UI/TabBtn";
 
-function RegisterForm() {
+function FormA({ next }) {
   return (
     <form className={styles.form}>
+      <div className={styles.typeSelectWrapper}>
+        <h4>Your Role is?</h4>
+        <div className={styles.typeContainer}>
+          <TabBtn title={"NGO"} />
+          <TabBtn title={"User"} />
+        </div>
+      </div>
       <Input
         label={"First Name"}
         fieldType={"text"}
@@ -37,26 +45,23 @@ function RegisterForm() {
         required={"true"}
       />
       <Input
-        label={"Password"}
-        fieldType={"password"}
-        placeholder={"Enter your password..."}
+        label={"Mobile Number"}
+        fieldType={"number"}
+        placeholder={"Enter your mobile number..."}
+        min={8}
+        max={10}
         required={"true"}
       />
       <Input
-        label={"Password"}
+        label={"Address"}
         fieldType={"password"}
-        placeholder={"Enter your password..."}
+        placeholder={"Enter your residential address..."}
         required={"true"}
       />
-      <Input
-        label={"Password"}
-        fieldType={"password"}
-        placeholder={"Enter your password..."}
-        required={"true"}
-      />
-      <Button title={"Create Account"}/>
+      <Input label={"Date of Birth"} fieldType={"date"} required={"true"} />
+      <Button title={"Create Account"} />
     </form>
   );
 }
 
-export default RegisterForm;
+export default FormA;

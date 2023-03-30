@@ -1,0 +1,24 @@
+.stepperWrapper {
+  display: flex;
+  align-items: center;
+  .stepContainer {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: acf-medium;
+  }
+  .stepContainer.active {
+    background-color: var(--primary-color);
+    color: var(--base-shade);
+    font-family: acf-demibold;
+    border: none;
+  }
+  .guidingLines {
+    width: 70px;
+    border: 1px solid var(--border-color);
+  }
+}
