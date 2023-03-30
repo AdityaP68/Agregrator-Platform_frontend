@@ -7,7 +7,7 @@ import ProgressStepper from "../../UI/ProgressStepper";
 import FormA from "./Forms/FormA";
 
 function Register() {
-  const [currentForm, setCurrentForm] = useState("A");
+  const [currStep, setCurrStep] = useState(1);
   return (
     <div className={styles.container}>
       <aside className={styles.aside}>
@@ -25,14 +25,25 @@ function Register() {
             </span>
           </div>
           <div className={styles.stepper}>
-            <ProgressStepper />
+            <ProgressStepper step={currStep} />
           </div>
-          <Formik>
-            
+          <Formik
+          // initialValues={{}}
+          // validationSchema={{}}
+          // onSubmit={{}}
+          >
+            {({ values, handleChange, errors, touched }) =>
+              // console.log({ values, handleChange, errors, touched })
+              currStep === 1 && (
+                <FormA
+                  values={values}
+                  handleChange={handleChange}
+                  errors={errors}
+                  next={setCurrStep}
+                />
+              )
+            }
           </Formik>
-          {currentForm === "A" && <FormA next={setCurrentForm} />}
-          {currentForm === "B" && <FormA next={setCurrentForm} />}
-          {currentForm === "C" && <FormA next={setCurrentForm} />}
         </section>
       </main>
     </div>

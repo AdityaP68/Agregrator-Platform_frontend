@@ -18,31 +18,31 @@ function FormA({ next }) {
         label={"First Name"}
         fieldType={"text"}
         placeholder={"Enter your first name..."}
-        required={"true"}
+        required={true}
       />
       <Input
         label={"Last Name"}
         fieldType={"text"}
         placeholder={"Enter your last name..."}
-        required={"true"}
+        required={true}
       />
       <Input
         label={"Email"}
         fieldType={"email"}
         placeholder={"Enter your email..."}
-        required={"true"}
+        required={true}
       />
       <Input
         label={"Username"}
         fieldType={"text"}
         placeholder={"Pick a username..."}
-        required={"true"}
+        required={true}
       />
       <Input
         label={"Password"}
         fieldType={"password"}
         placeholder={"Enter your password..."}
-        required={"true"}
+        required={true}
       />
       <Input
         label={"Mobile Number"}
@@ -50,15 +50,15 @@ function FormA({ next }) {
         placeholder={"Enter your mobile number..."}
         min={8}
         max={10}
-        required={"true"}
+        required={true}
       />
       <Input
         label={"Address"}
         fieldType={"password"}
         placeholder={"Enter your residential address..."}
-        required={"true"}
+        required={true}
       />
-      <Input label={"Date of Birth"} fieldType={"date"} required={"true"} />
+      <Input label={"Date of Birth"} fieldType={"date"} required={true} />
       <Button title={"Create Account"} />
     </form>
   );
