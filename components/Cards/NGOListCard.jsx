@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./NGOListItemCard.module.scss";
+import styles from "./NGOListCard.module.scss";
 
-function NGOListItemCard({ username, description }) {
+function NGOListCard({ username, description }) {
   return (
     <Link href={"#"}>
       <div className={styles.cardBody}>
@@ -23,4 +23,4 @@ function NGOListItemCard({ username, description }) {
   );
 }
 
-export default NGOListItemCard;
+export default NGOListCard;

@@ -1,6 +1,6 @@
 .listContainer{
     h6{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         font-family: acf-medium;
         display: flex;
         gap: 2rem;
@@ -9,13 +9,13 @@
             color: var(--primary-color);
             display: block;
             font-family: acf-reg;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             align-items: baseline;
             margin-right: 5px;
         }
     }
     .list{
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;

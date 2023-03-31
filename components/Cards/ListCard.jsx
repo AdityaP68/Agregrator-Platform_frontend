@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./ListItemCard.module.scss";
+import styles from "./ListCard.module.scss";
 
-function ListItemCard({ iconType, cardSize, children }) {
+function ListCard({ iconType, cardSize, children }) {
   return (
     <Link href={"#"}>
       <div
@@ -26,4 +26,4 @@ function ListItemCard({ iconType, cardSize, children }) {
   );
 }
 
-export default ListItemCard;
+export default ListCard;
