@@ -3,31 +3,61 @@
   width: 100%;
   padding: 1.2rem;
   border-radius: 10px;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  .textareaRow {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
   .userImg {
     height: 45px;
     width: 45px;
     background-color: var(--grey-shade-links);
     border-radius: 50%;
   }
-  .textEditorContainer{
-      width: 100%;
-      .inputWrapper{
-        border-radius: 5px;
-        background-color: var( --off-gray);
+  .textEditorContainer {
+    width: 100%;
+    .inputWrapper {
+      border-radius: 5px;
+      background-color: var(--off-gray);
+      padding: 0.5rem;
+      input {
+        width: 100%;
+        background-color: var(--off-gray);
+        border: none;
         padding: 0.5rem;
-        input{
-            width: 100%;
-            background-color: var( --off-gray);
-            border: none;
-            padding: 0.5rem;
-            &:focus{
-                outline: none;
-            }
+        &:focus {
+          outline: none;
         }
+      }
+    }
+  }
+}
 
+
+.attachmentOptionsRow{
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  .optionsWrapper{
+    display: flex;
+    gap: 1rem;
+    .options{
+      height: 25px;
+      width: 25px;
+      color: var(--grey-shade-links);
+    }
+  }
+  .postBtnWrapper{
+    button{
+      cursor: pointer;
+      background-color: #ffffff;
+      border: 1px solid var(--grey-shade-links);
+      padding: 0.3rem 1.7rem;
+      border-radius: 3px;
+      font-family: acf-medium;
+      &:hover{
+        background-color: #f9f9f9;
+      }
     }
   }
 }
