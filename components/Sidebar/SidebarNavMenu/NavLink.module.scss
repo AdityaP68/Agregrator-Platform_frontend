@@ -8,35 +8,40 @@
   &:hover {
     color: white;
     background-color: rgb(183, 208, 255);
-    .linkIcon{
-        background-color: #f5f6fa;
+    .linkIcon {
+      background-color: #f5f6fa;
     }
-    .linkTitle{
-        color: #f5f6fa;
+    .linkTitle {
+      color: #f5f6fa;
     }
   }
 
   .linkIcon {
     height: 30px;
     width: 30px;
-    background-color: var(--grey-shade-links);
+    //background-color: var(--grey-shade-links);
     display: block;
     border-radius: 6px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: var(--grey-shade-links);
   }
   .linkTitle {
-      font-family: acf-medium;
-      text-transform: capitalize;
-      color: var(--grey-shade-links);
-    }
+    font-family: acf-medium;
+    text-transform: capitalize;
+    color: var(--grey-shade-links);
+  }
 }
 
-.linkWrapper.active{
-    background-color: var(--primary-color);
-    .linkIcon{
-        background-color: #ffffff;
-    }
-    .linkTitle{
-        color: #ffffff;
-    }
+.linkWrapper.active {
+  background-color: var(--primary-color);
+  .linkIcon {
+    background-color: #ffffff;
+    color: var(--primary-color);
+  }
+  .linkTitle {
+    color: #ffffff;
+  }
 }
