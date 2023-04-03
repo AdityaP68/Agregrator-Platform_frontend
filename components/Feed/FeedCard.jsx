@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PostsCard.module.scss";
+import styles from "./FeedCard.module.scss";
 
 function PostsCard() {
   return (
@@ -11,6 +11,11 @@ function PostsCard() {
             <p className={styles.authorName}>Alison Burgers</p>
             <p className={styles.username}>{"@"}alladin897</p>
           </div>
+        </div>
+        <div className={styles.viewMoreBtn}>
+          <div className={styles.dots}></div>
+          <div className={styles.dots}></div>
+          <div className={styles.dots}></div>
         </div>
       </div>
 

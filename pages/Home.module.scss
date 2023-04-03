@@ -1,5 +1,21 @@
-.contentWrapper{
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  .feedColumn {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+  .feedSuggestColumn {
+    .item {
+      width: 250px;
+      background-color: white;
+      height: 600px;
+      border-radius: 10px;
+      position: sticky;
+      top: 0; 
+    }
+
+  }
 }

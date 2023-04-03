@@ -1,0 +1,68 @@
+.postsCardWrapper {
+  background-color: #ffffff;
+  width: 100%;
+  // height: 350px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  font-family: acf-medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .postHeader {
+    border-bottom: 1px solid rgb(228, 228, 228);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .postContent {
+    padding: 1.2rem 1.5rem;
+    font-family: acf-medium;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .postFooter {
+    border-top: 1px solid rgb(228, 228, 228);
+    height: 60px;
+  }
+
+}
+
+
+.namecard {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  .profileImg {
+    height: 32px;
+    width: 32px;
+    background-color: var(--grey-shade-links);
+    border-radius: 50%;
+  }
+  .details {
+    .authorName {
+      font-family: acf-medium;
+      font-size: 0.85rem;
+      text-transform: capitalize;
+    }
+    .username {
+      font-family: acf-reg;
+      font-size: 0.7rem;
+      color: #949494;
+    }
+  }
+}
+
+.viewMoreBtn {
+  display: flex;
+  gap: 0.15rem;
+  cursor: pointer;
+  .dots {
+    height: 4px;
+    width: 4px;
+    background-color: var(--grey-shade-links);
+    border-radius: 100%;
+  }
+}
