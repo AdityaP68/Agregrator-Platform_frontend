@@ -1,0 +1,14 @@
+.socialBtnsWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.7rem;
+
+  .socialBtns {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--grey-shade-links);
+    font-family: acf-medium;
+  }
+}

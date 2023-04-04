@@ -5,6 +5,7 @@
   .feedColumn {
     display: flex;
     flex-direction: column;
+    min-width: 350px;
     gap: 1rem;
   }
   .feedSuggestColumn {
@@ -16,6 +17,5 @@
       position: sticky;
       top: 0; 
     }
-
   }
 }

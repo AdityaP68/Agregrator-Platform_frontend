@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Home.module.scss";
 import HomeLayout from "../components/Layouts/HomeLayout";
 import CreatePost from "../components/CreatePost/CreatePost";
-import FeedCard from "../components/Feed/FeedCard";
+import FeedCard from "../components/Feed/FeedCard/FeedCard";
 import Modal from "../components/UI/Modal";
 
 export default function Home() {
