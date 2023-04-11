@@ -1,0 +1,26 @@
+.suggestionListItem{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .iconWrapper{
+        .icon{
+            display: block;
+            height: 28px;
+            width: 28px;
+            background-color: var(--grey-shade-links);
+            border-radius: 50%;
+        }
+    }
+    .title{
+        p{
+            font-family: acf-medium;
+            font-size: 0.8rem;
+
+        }
+        small{
+            color: gray;
+            font-size: 0.7rem;
+            font-family: acf-reg;
+        }
+    }
+}

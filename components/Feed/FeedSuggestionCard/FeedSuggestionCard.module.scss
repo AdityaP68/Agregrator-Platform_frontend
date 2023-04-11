@@ -1,0 +1,29 @@
+.suggestionCardWrapper {
+  width: 250px;
+
+
+  position: sticky;
+  top: 0;
+
+}
+
+.listHeading {
+  font-family: acf-medium;
+  font-size: 0.85rem;
+  //background-color: var( --off-purple);
+  background-color: var( --primary-color);
+  color: var(--base-shade);
+  padding: 1.2rem;
+  border-radius: 8px;
+  
+}
+
+.suggestionList {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.8rem 1.2rem 4rem 1.2rem;
+  background-color: white;
+  border-radius: 10px;
+}

@@ -4,6 +4,7 @@ import HomeLayout from "../components/Layouts/HomeLayout";
 import CreatePost from "../components/CreatePost/CreatePost";
 import FeedCard from "../components/Feed/FeedCard/FeedCard";
 import Modal from "../components/UI/Modal";
+import FeedSuggestionCard from "../components/Feed/FeedSuggestionCard/FeedSuggestionCard";
 
 export default function Home() {
   const [modalState, setModalState] = useState(false);
@@ -21,7 +22,7 @@ export default function Home() {
             <FeedCard />
           </div>
           <div className={styles.feedSuggestColumn}>
-            <div className={styles.item}/>
+              <FeedSuggestionCard/>
           </div>
         </div>
       </HomeLayout>
