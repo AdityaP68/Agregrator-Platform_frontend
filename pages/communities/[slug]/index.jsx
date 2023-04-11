@@ -3,7 +3,7 @@ import styles from './CommunityById.module.scss'
 import HomeLayout from '../../../components/Layouts/HomeLayout'
 import CreatePost from '../../../components/CreatePost/CreatePost'
 import CommunityHeader from '../../../components/Community/CommunityHeader'
-import PostsCard from '../../../components/Posts/PostsCard'
+import FeedCard from '../../../components/Feed/FeedCard/FeedCard'
 
 export default function index() {
   return (
@@ -11,9 +11,12 @@ export default function index() {
       <div className={styles.contentWrapper}>
         <CommunityHeader/>
         <CreatePost/>
-        <PostsCard/>
-        <PostsCard/>
-        <PostsCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
       </div>
     </HomeLayout>
   )

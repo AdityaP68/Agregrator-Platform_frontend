@@ -1,13 +1,13 @@
 .landingSection {
   padding: 0.8rem;
-  background-color: #ffffff;
+  background-color: #2520e3;
   width: 100%;
   border-radius: 10px;
   .landingSectionWrapper {
     width: 100%;
-    height: 300px;
+    height: 200px;
     border-radius: 10px;
-    background-color: var(--off-gray);
+    background-color: var(--primary-color);
     //background-image: url("./../../../public/images/discover/landing.png");
     background-size: cover;
     border: 0;
@@ -19,7 +19,7 @@
     h1{
         font-family: acf-medium;
         font-size: 2rem;
-        color: var(--primary-color);
+        color: var(--base-shade);
     }
   }
 }

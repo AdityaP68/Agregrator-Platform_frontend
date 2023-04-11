@@ -6,12 +6,13 @@
   align-items: center;
   .nameInput,
   .categoryInput {
-    color: #1c1c1c;
+    color: #000000;
     box-shadow: 1px 6px 10px #00000017;
     font-family: acf-medium;
     border: none;
     padding: 0.7rem 1rem;
     border-radius: 5px;
+    background-color: rgb(240, 240, 240);
 
     &:focus {
       outline-color: var(--primary-color);
@@ -27,11 +28,12 @@
   }
   .searchBtn {
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--base-shade);
     padding: 0.7rem 1rem;
     border-radius: 5px;
-    color: #ffffff;
+    //color: #ffffff;
     font-family: acf-medium;
     box-shadow: 1px 6px 10px #00000024;
+    cursor: pointer;
   }
 }
