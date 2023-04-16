@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Home.module.scss";
 import HomeLayout from "../components/Layouts/HomeLayout";
 import CreatePost from "../components/CreatePost/CreatePost";
-import FeedCard from "../components/Feed/FeedCard/FeedCard";
+import FeedCard from "../components/Feed/FeedSocialPostsCard/FeedCard";
 import Modal from "../components/UI/Modal";
 import FeedSuggestionCard from "../components/Feed/FeedSuggestionCard/FeedSuggestionCard";
 
@@ -15,14 +15,15 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.feedColumn}>
             <CreatePost modalState={setModalState} />
-            <FeedCard />
+            <FeedCard isAppretiationPost={true} appretiationReference={""} />
+            <FeedCard isAppretiationPost={true} appretiationReference={""} />
             <FeedCard />
             <FeedCard />
             <FeedCard />
             <FeedCard />
           </div>
           <div className={styles.feedSuggestColumn}>
-              <FeedSuggestionCard/>
+            <FeedSuggestionCard />
           </div>
         </div>
       </HomeLayout>
