@@ -1,20 +1,31 @@
 import React from "react";
 import styles from "./FeedCard.module.scss";
-import FeedCardText from "./FeedCardTextArea/FeedCardText";
-
+import CardText from "./FeedCardTextArea/CardText";
 import FeedCardMedia from "./FeedCardLayout/FeedCardMedia";
 import SocialBtns from "./FeedCardLayout/SocialBtns";
 import FeedCardHeader from "./FeedCardLayout/FeedCardHeader";
+import DonationCard from "./FeedCardLayout/DonationCard";
 
-
-function PostsCard({isAppretiationPost}) {
+function PostsCard({
+  isAppretiationPost,
+  appretiationReference,
+  progress,
+  media,
+  postTitle,
+  requestDonation
+}) {
   return (
     <div className={styles.postsCardWrapper}>
-      <FeedCardHeader/>
+      <FeedCardHeader />
 
-      <FeedCardText isAppretiationPost={isAppretiationPost} />
-      {!isAppretiationPost && <FeedCardMedia />}
-
+      <CardText
+        isAppretiationPost={isAppretiationPost}
+        appretiationReference={appretiationReference}
+        progress={progress}
+        postTitle={postTitle}
+        requestDonation={requestDonation}
+      />
+      {media && <FeedCardMedia />}
       <div className={styles.postFooter}>
         <SocialBtns />
       </div>

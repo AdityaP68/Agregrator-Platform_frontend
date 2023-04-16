@@ -15,10 +15,18 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.feedColumn}>
             <CreatePost modalState={setModalState} />
-            <FeedCard isAppretiationPost={true} appretiationReference={""} />
-            <FeedCard isAppretiationPost={true} appretiationReference={""} />
-            <FeedCard />
-            <FeedCard />
+            <FeedCard
+              isAppretiationPost={true}
+              appretiationReference={""}
+              progress={100}
+            />
+            <FeedCard
+              isAppretiationPost={true}
+              appretiationReference={""}
+              progress={40}
+            />
+            <FeedCard media={true} postTitle={"Weekly Goals Achieved"} />
+            <FeedCard requestDonation={true} postTitle={"Need Urgent Help"} />
             <FeedCard />
             <FeedCard />
           </div>
