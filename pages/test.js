@@ -1,29 +1,79 @@
-// import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import { useFormik } from "formik";
 
-// export default function test() {
-//     const [inputValue, setInputValue] = useState('Type your input here');
-
-//     function handleInput(event) {
-//       setInputValue(event.target.textContent);
-//       console.log(inputValue)
-//     }
-  
-//     return (
-//       <div
-//         contentEditable={true}
-//         onInput={handleInput}
-//         dangerouslySetInnerHTML={{ __html: inputValue }}
-//       />
-//     );
-// }
-
-import React from 'react'
-import HomeLayout from '../components/Layouts/HomeLayout'
-
-function test() {
+function Form2({ formik }) {
   return (
-    <HomeLayout/>
-  )
+    <>
+      <input
+        type="text"
+        placeholder="address"
+        onChange={formik.handleChange}
+        value={formik.values.address}
+        name={"address"}
+      />
+      <input
+        type="text"
+        placeholder="city"
+        onChange={formik.handleChange}
+        value={formik.values.city}
+        name="city"
+      />
+    </>
+  );
 }
 
-export default test
+function Form() {
+  const [next, setNext] = useState(false);
+  const formik = useFormik({
+    initialValues: next
+      ? {
+          username: "",
+          password: "",
+        }
+      : { address: "", city: "" },
+    onSubmit: (values) => {
+      console.log(values);
+      formik.resetForm();
+    },
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+  };
+  return (
+    <>
+      <form onSubmit={formik.handleSubmit}>
+        {!next && (
+          <>
+            <input
+              type="text"
+              placeholder="username"
+              onChange={formik.handleChange}
+              value={formik.values.username}
+              name="username"
+            />
+            <input
+              type="text"
+              placeholder="password"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              name="password"
+            />
+          </>
+        )}
+        {next && <Form2 formik={formik} />}
+        <button
+          onClick={() => {
+            setNext(true);
+          }}
+          type="submit"
+        >
+          next
+        </button>
+      </form>
+    </>
+  );
+}
+
+export default Form;

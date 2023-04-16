@@ -5,13 +5,17 @@ import PlaceIcon from "@mui/icons-material/Place";
 import ImageIcon from "@mui/icons-material/Image";
 import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
 import styles from "./CreatePost.module.scss";
+import Image from "next/image";
+import logoImg from '../../public/images/user.png'
 
 function CreatePost({ modalState }) {
   return (
     <div className={styles.container}>
       <div className={styles.textareaRow}>
         <div className={styles.userImgWrapper}>
-          <div className={styles.userImg} />
+          <div className={styles.userImg} >
+            <Image src={logoImg} height={45} alt={'logo'} />
+          </div>
         </div>
         <div className={styles.textEditorContainer}>
           <div

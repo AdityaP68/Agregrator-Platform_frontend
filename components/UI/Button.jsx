@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-function Button({ title }) {
+function Button({ title, type }) {
   return (
-    <div className={styles.btn}>
+    <button className={styles.btn} type={type}>
       <span>{title}</span>
-    </div>
+    </button>
   );
 }
 

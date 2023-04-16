@@ -5,6 +5,20 @@ import { Formik, Field, Form, FormikProps } from "formik";
 import FormSidebar from "../FormSidebar";
 import ProgressStepper from "../../UI/ProgressStepper";
 import FormA from "./Forms/FormA";
+import validationSchema from "../../../utils/validationSchema";
+
+const initialValues = {
+  role: "",
+  firstName: "",
+  lastName: "",
+  email: "",
+  username: "",
+  password: "",
+  confirmedPassword: "",
+  mobileNumber: "",
+  address: "",
+  dateOfBirth: "",
+};
 
 function Register() {
   const [currStep, setCurrStep] = useState(1);
@@ -28,9 +42,11 @@ function Register() {
             <ProgressStepper step={currStep} />
           </div>
           <Formik
-          // initialValues={{}}
-          // validationSchema={{}}
-          // onSubmit={{}}
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={() => {
+              console.log(values);
+            }}
           >
             {({ values, handleChange, errors, touched }) =>
               // console.log({ values, handleChange, errors, touched })
@@ -40,6 +56,7 @@ function Register() {
                   handleChange={handleChange}
                   errors={errors}
                   next={setCurrStep}
+                  touched={touched}
                 />
               )
             }

@@ -4,7 +4,7 @@ import Input from "../../../UI/Input";
 import Button from "../../../UI/Button";
 import TabBtn from "../../../UI/TabBtn";
 
-function FormA({ next }) {
+function FormA({ next, values, handleChange, touched }) {
   return (
     <form className={styles.form}>
       <div className={styles.typeSelectWrapper}>
@@ -18,7 +18,11 @@ function FormA({ next }) {
         label={"First Name"}
         fieldType={"text"}
         placeholder={"Enter your first name..."}
+        value={values.firstName}
+        onChange={handleChange}
+        error={touched.firstName && errors.firstName}
         required={true}
+
       />
       <Input
         label={"Last Name"}
@@ -45,11 +49,17 @@ function FormA({ next }) {
         required={true}
       />
       <Input
+        label={"Confirmed Password"}
+        fieldType={"password"}
+        placeholder={"Enter your confirmed password..."}
+        required={true}
+      />
+      <Input
         label={"Mobile Number"}
         fieldType={"number"}
         placeholder={"Enter your mobile number..."}
-        min={8}
-        max={10}
+        // min={8}
+        // max={10}
         required={true}
       />
       <Input
@@ -59,7 +69,7 @@ function FormA({ next }) {
         required={true}
       />
       <Input label={"Date of Birth"} fieldType={"date"} required={true} />
-      <Button title={"Create Account"} />
+      <Button title={"Create Account"} type={'submit'}/>
     </form>
   );
 }

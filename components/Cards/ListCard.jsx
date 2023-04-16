@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./ListCard.module.scss";
 
-function ListCard({ iconType, cardSize, children }) {
+function ListCard({ iconType, cardSize, children, imgsrc }) {
   return (
     <Link href={"#"}>
       <div
@@ -18,7 +18,7 @@ function ListCard({ iconType, cardSize, children }) {
             (iconType === "square" && styles.squareLinkIcon)
           }
         >
-          <Image src={""} alt={""} />
+          <Image src={imgsrc} height={25} alt={""}/>
         </div>
         <p className={styles.linkTitle}>{children}</p>
       </div>

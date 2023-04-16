@@ -5,14 +5,17 @@
   .squareLinkIcon {
     height: 28px;
     width: 28px;
-    background-color: var(--grey-shade-links);
+    // background-color: var(--grey-shade-links);
+    border: 1px solid var(--grey-shade-links);
     border-radius: 5px;
+    overflow: hidden;
   }
   .circularLinkIcon {
     height: 28px;
     width: 28px;
-    background-color: var(--grey-shade-links);
+    border: 1px solid var(--grey-shade-links);
     border-radius: 50%;
+    overflow: hidden;
   }
   .linkTitle {
     font-family: acf-medium;

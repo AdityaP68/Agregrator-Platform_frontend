@@ -1,7 +1,17 @@
 import React from "react";
 import styles from "./Input.module.scss";
 
-function Input({ label, placeholder, fieldType, required, max, min }) {
+function Input({
+  label,
+  placeholder,
+  fieldType,
+  required,
+  max,
+  min,
+  error,
+  handleChange,
+  value,
+}) {
   return (
     <div className={styles.inputWrapper}>
       <label>{label}</label>
@@ -9,11 +19,13 @@ function Input({ label, placeholder, fieldType, required, max, min }) {
         type={fieldType}
         name={fieldType}
         placeholder={placeholder}
+        value={value}
+        handleChange={handleChange}
         required={required}
         max={max}
         min={min}
       />
-      {/* <span className={styles.errorText}>*error text</span> */}
+      {error && <span className={styles.errorText}>{error}</span> }
     </div>
   );
 }
