@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 
-const validationSchema = Yup.object({
-  role: Yup.string().required("Required"),
+const form1ValidationSchema = Yup.object({
+  // role: Yup.string().required("Required"),
   firstName: Yup.string().required("Required"),
   lastName: Yup.string().required("Required"),
   email: Yup.string().email("Invalid email address").required("Required"),
@@ -20,4 +20,4 @@ const validationSchema = Yup.object({
   dateOfBirth: Yup.date().required("Required"),
 });
 
-export default validationSchema;
+export default form1ValidationSchema;

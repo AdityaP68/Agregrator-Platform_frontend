@@ -2,30 +2,31 @@ import React from "react";
 import styles from "./Input.module.scss";
 
 function Input({
-  label,
-  placeholder,
-  fieldType,
-  required,
-  max,
-  min,
-  error,
-  handleChange,
+  labelName,
+  type,
+  name,
+  id,
   value,
+  onChange,
+  onBlur,
+  placeholder
 }) {
   return (
     <div className={styles.inputWrapper}>
-      <label>{label}</label>
+      <label>{labelName}</label>
       <input
-        type={fieldType}
-        name={fieldType}
-        placeholder={placeholder}
+        type={type}
+        name={name}
+        id={id}
         value={value}
-        handleChange={handleChange}
-        required={required}
-        max={max}
-        min={min}
+        onChange={onChange}
+        onBlur={onBlur}
+        placeholder={placeholder}
+        // required={required}
+        // max={max}
+        // min={min}
       />
-      {error && <span className={styles.errorText}>{error}</span> }
+      {/* {error && <span className={styles.errorText}>{error}</span> } */}
     </div>
   );
 }
