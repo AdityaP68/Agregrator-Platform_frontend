@@ -9,10 +9,12 @@ function Input({
   value,
   onChange,
   onBlur,
-  placeholder
+  placeholder,
+  touched,
+  error,
 }) {
   return (
-    <div className={styles.inputWrapper}>
+    <div className={`${styles.inputWrapper}`}>
       <label>{labelName}</label>
       <input
         type={type}
@@ -22,11 +24,13 @@ function Input({
         onChange={onChange}
         onBlur={onBlur}
         placeholder={placeholder}
-        // required={required}
-        // max={max}
-        // min={min}
+        style={touched && error && { border: "2px solid #f63131" }}
       />
-      {/* {error && <span className={styles.errorText}>{error}</span> } */}
+      {touched && error && (
+        <span className={styles.errorMessageWrapper}>
+          <span className={styles.errorText}>{"*" + error}</span>
+        </span>
+      )}
     </div>
   );
 }

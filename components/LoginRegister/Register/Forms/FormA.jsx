@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./FormStyles.module.scss";
-import { Formik, Form } from "formik";
+import { Formik, Form} from "formik";
+import axios from 'axios';
 import Input from "../../../UI/Input";
 import Button from "../../../UI/Button";
-import TabBtn from "../../../UI/TabBtn";
+import ChoiceTabBtn from "../../../UI/ChoiceTabBtn";
 import form1ValidationSchema from "../../../../utils/validationSchema";
+import { userRegisterPath } from "../../../../utils/endpointConfig";
 
 function FormA() {
+  // const [selectedRole, setSelectedRole] = useState("");
   const initialValues = {
-    role: "",
+    role:"",
     firstName: "",
     lastName: "",
     email: "",
@@ -20,9 +23,27 @@ function FormA() {
     dateOfBirth: "",
   };
 
-  const handleSubmit = (values, { setSubmitting }) => {
+  // const handleRoleSelect = (role) => {
+  //   setSelectedRole(role);
+  // };
+
+  const handleSubmit = async (values, { setSubmitting, setStatus, setFieldError }) => {
     console.log(values);
-    setSubmitting(false);
+    try{
+      const response = await axios.post(userRegisterPath, values)
+      console.log("response", response);
+      
+      //setSubmitting(false);
+    }catch(error){
+      console.log(error.response.data)
+      if(error?.response && error?.response?.status === 409){
+        setStatus({error: "conflict"})
+        //setFieldError(conflictField, `This ${conflictField} is already registered`)
+        //console.log("conflict firld ",conflictField)
+      }else{
+        console.log("this is the error", error)
+      }
+    }
   };
 
   return (
@@ -31,17 +52,26 @@ function FormA() {
       validationSchema={form1ValidationSchema}
       onSubmit={handleSubmit}
     >
-      {({ values, errors, touched, handleChange, handleBlur }) => (
+      {({ values, errors, touched, handleChange, handleBlur, setValues, status }) => (
         <Form className={styles.form}>
           {console.log(errors)}
-          {/* <div className={styles.typeSelectWrapper}>
+          <div className={styles.typeSelectWrapper}>
             <h4>Your Role is?</h4>
             <div className={styles.typeContainer}>
-              <TabBtn title={"NGO"} />
-              <TabBtn title={"User"} />
+              <ChoiceTabBtn
+                label={"NGO"}
+                selected={values.role === "ngo"}
+                onClick={() => setValues({ ...values, role: "ngo" })}
+              />
+
+              <ChoiceTabBtn
+                label={"User"}
+                selected={values.role === "user"}
+                onClick={() => setValues({ ...values, role: "user" })}
+              />
             </div>
-          </div> */}
-          {/* <label htmlFor="firstName">First Name</label> */}
+          </div>
+
           <Input
             labelName={"First Name"}
             type="text"
@@ -52,6 +82,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your first name..."
             required={true}
+            touched={touched.firstName}
+            error={errors.firstName}
           />
           <Input
             labelName={"Last Name"}
@@ -63,6 +95,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your last name..."
             required={true}
+            touched={touched.lastName}
+            error={errors.lastName}
           />
           <Input
             labelName={"Email"}
@@ -74,6 +108,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your email..."
             required={true}
+            touched={touched.email}
+            error={errors.email}
           />
           <Input
             labelName={"Username"}
@@ -85,6 +121,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your username..."
             required={true}
+            touched={touched.username}
+            error={errors.username}
           />
           <Input
             labelName={"Password"}
@@ -96,6 +134,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your password..."
             required={true}
+            touched={touched.password}
+            error={errors.password}
           />
           <Input
             labelName={"Confirm Password"}
@@ -107,6 +147,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your confirm password..."
             required={true}
+            touched={touched.confirmPassword}
+            error={errors.confirmPassword}
           />
           <Input
             labelName={"Mobile Number"}
@@ -118,6 +160,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your mobile number..."
             required={true}
+            touched={touched.mobileNumber}
+            error={errors.mobileNumber}
           />
           <Input
             labelName={"Address"}
@@ -129,6 +173,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your address..."
             required={true}
+            touched={touched.address}
+            error={errors.address}
           />
           <Input
             labelName={"Date of Birth"}
@@ -140,6 +186,8 @@ function FormA() {
             onBlur={handleBlur}
             placeholder="Enter your DOB..."
             required={true}
+            touched={touched.dateOfBirth}
+            error={errors.dateOfBirth}
           />
 
           <Button title={"Create Account"} type={"submit"} />

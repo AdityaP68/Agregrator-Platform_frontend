@@ -19,15 +19,22 @@
 
     // &::placeholder {
     // }
-    &:focus{
-        outline: none !important;
-        border: 2px solid var(--primary-color);
-
+    &:focus {
+      outline: none !important;
+      border: 2px solid var(--primary-color);
     }
   }
-  .errorText {
-    min-height: 22px;
-    color: #f63131;
-    margin-top: 0.3rem;
+
+  .errorMessageWrapper {
+    height: 12px;
+    position: relative;
+    .errorText {
+      color: #ff4848;
+      position: absolute;
+      font-family: acf-medium;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
   }
 }
