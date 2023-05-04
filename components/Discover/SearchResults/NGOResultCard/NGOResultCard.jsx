@@ -1,9 +1,16 @@
 import React from "react";
 import styles from "./NGOResultCard.module.scss";
+import { useRouter } from "next/router";
 
 function NGOResultCard() {
+  const router = useRouter();
   return (
-    <div className={styles.cardWrapper}>
+    <div
+      className={styles.cardWrapper}
+      onClick={() => {
+        router.push("/discover/ngo/id");
+      }}
+    >
       <div className={styles.credentialsRow}>
         <div className={styles.ngo}>
           <div className={styles.ngoIcon}></div>

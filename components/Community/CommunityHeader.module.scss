@@ -1,13 +1,13 @@
 .headerSection {
   background-color: #ffffff;
-  height: 320px;
+  height: 340px;
   width: 100%;
   padding: 0.5rem;
   border-radius: 8px;
   .coverImageContainer {
     height: 50%;
     width: 100%;
-    background-color: var(--grey-shade-links);
+    background-color: #227bff;
     border-radius: 6px 6px 0 0;
     position: relative;
     .profileImageContainer {
@@ -21,7 +21,13 @@
       .profileImage {
         height: 55px;
         width: 55px;
-        background-color: var(--grey-shade-links);
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: acf-demibold;
+        font-size: 1.2rem;
         border: 3px solid #ffffff;
         border-radius: 7px;
       }
@@ -29,7 +35,7 @@
         font-family: acf-medium;
         font-size: 0.7rem;
         position: relative;
-        transform: translateY(-13px);
+        transform: translateY(9px);
         color: #b2b2b2;
       }
     }
@@ -57,4 +63,26 @@
 .communityTabsMenu {
   border-top: 1px solid rgb(218, 218, 218);
   margin-top: 1.8rem;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  .menuItem{
+    display: block;
+    font-size: 0.8rem;
+    color: #808080;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+  }
+  .menuBorder{
+    background-color: #b1b1b1;
+    height: 20px;
+    width: 1px;
+  }
 }

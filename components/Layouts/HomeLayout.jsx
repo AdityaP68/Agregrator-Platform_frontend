@@ -3,12 +3,16 @@ import styles from "./HomeLayout.module.scss";
 import Sidebar from "../Sidebar/Sidebar";
 import Navbar from "../Navbar/Navbar";
 import Infobar from "../Infobar/Infobar";
+import { useCookies } from "react-cookie";
 
 function HomeLayout({ children }) {
+  const cookies = useCookies()
+  console.log("this is cookies", cookies)
+
   return (
     <div className={styles.container}>
       <aside className={styles.aside}>
-        <Sidebar />
+        <Sidebar user={cookies[0].user} />
       </aside>
       <main className={styles.main}>
         <Navbar />

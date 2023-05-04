@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import styles from "./Home.module.scss";
 import HomeLayout from "../components/Layouts/HomeLayout";
 import CreatePost from "../components/CreatePost/CreatePost";
@@ -8,6 +9,19 @@ import FeedSuggestionCard from "../components/Feed/FeedSuggestionCard/FeedSugges
 
 export default function Home() {
   const [modalState, setModalState] = useState(false);
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get("http://localhost:9000/posts");
+        setPosts(response.data.posts);
+        console.log(posts);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchPosts();
+  }, []);
   return (
     <>
       {modalState && <Modal modalState={setModalState} />}
@@ -15,7 +29,16 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.feedColumn}>
             <CreatePost modalState={setModalState} />
-            <FeedCard
+            {posts.map((postData, idx) => (
+              <FeedCard
+                key={idx}
+                postData={postData}
+                isAppretiationPost={""}
+                appretiationReference={""}
+                progress={""}
+              />
+            ))}
+            {/* <FeedCard
               isAppretiationPost={true}
               appretiationReference={""}
               progress={100}
@@ -24,11 +47,11 @@ export default function Home() {
               isAppretiationPost={true}
               appretiationReference={""}
               progress={40}
-            />
-            <FeedCard media={true} postTitle={"Weekly Goals Achieved"} />
+            /> */}
+            {/* <FeedCard media={true} postTitle={"Weekly Goals Achieved"} />
             <FeedCard requestDonation={true} postTitle={"Need Urgent Help"} />
             <FeedCard />
-            <FeedCard />
+            <FeedCard /> */}
           </div>
           <div className={styles.feedSuggestColumn}>
             <FeedSuggestionCard />

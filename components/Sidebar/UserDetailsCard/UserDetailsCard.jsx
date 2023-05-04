@@ -4,7 +4,7 @@ import Image from "next/image";
 import blueTickImg from "../../../public/images/bluetick.png";
 import userImg from "../../../public/images/user.png";
 
-function UserDetailsCard() {
+function UserDetailsCard({user}) {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardItemRow1}>
@@ -17,12 +17,12 @@ function UserDetailsCard() {
 
         <div className={styles.userdetails}>
           <p>
-            Alison Mayhew
+            {`${user?.firstName} ${user?.lastName}`}
             <span className={styles.verifiedTick}>
               <Image src={blueTickImg} height={14} alt={"blue tick"} />
             </span>
           </p>
-          <span className={styles.username}>@clam_mayhem87</span>
+          <span className={styles.username}>@{user?.username}</span>
         </div>
       </div>
       <div className={styles.cardItemRow2}>

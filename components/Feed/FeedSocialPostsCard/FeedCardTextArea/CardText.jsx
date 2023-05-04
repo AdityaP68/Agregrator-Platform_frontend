@@ -7,16 +7,12 @@ import FeedCardMedia from "../FeedCardLayout/FeedCardMedia";
 
 function FeedCardText({
   isAppretiationPost,
-  appretiationReference,
   progress,
-  postTitle,
   requestDonation,
-  type
+  postData
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const text = `We are constantly amazed by the dedication and passion of the Muskaan team,
-   as well as their volunteers and supporters. Their willingness to go above and beyond to 
-   help those in need is truly remarkable, and we are grateful for all that they do.`;
+  const text = postData?.description || 'no description' ;
 
   const truncatedText = truncateString(text, 150);
   const shouldTruncate = truncatedText !== text;
@@ -25,7 +21,7 @@ function FeedCardText({
     <div className={styles.postContent}>
       {!isAppretiationPost ? (
         <>
-          <h4 className={styles.postTitle}>{postTitle}</h4>
+          <h4 className={styles.postTitle}>{postData?.title || "NO TITLE"}</h4>
           {isExpanded ? text : truncatedText}
           {shouldTruncate && (
             <button
