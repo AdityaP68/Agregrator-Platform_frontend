@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeLayout from "../../../components/Layouts/HomeLayout";
 import CommunityHeader from "../../../components/Community/CommunityHeader";
 import FeedCard from "../../../components/Feed/FeedSocialPostsCard/FeedCard";
@@ -6,18 +6,52 @@ import CreatePost from "../../../components/CreatePost/CreatePost";
 import styles from "./NGOPage.module.scss";
 import { useCookies } from "react-cookie";
 import TransactionLogs from "../../../components/NGOPage/TransactionLogs";
+import { useRouter } from "next/router";
+import axios from "axios";
 
 function NGOPage() {
-  const cookies = useCookies();
-  const posts = [1, 2, 3, 4, 5];
+  const router = useRouter();
+  const { ngo } = router.query;
+  console.log("this is ngo ID", ngo);
+  const [postList, setPostList] = useState([]);
+  const [ngoUser, setNgoUser] = useState();
+
   const [listState, setListState] = useState("posts");
-  //console.log(cookies[0].user)
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get(`http://localhost:9000/users/${ngo}`);
+        //console.log("check the following response", response?.data?.user);
+        setNgoUser(response?.data?.user);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get(`http://localhost:9000/posts/${ngo}`);
+        //console.log("check the following response plz", response?.data?.posts);
+        setPostList(response?.data?.posts);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchUser();
+    fetchPosts();
+  }, []);
+
+  console.log("this is the new one", ngoUser);
+
   return (
     <HomeLayout>
       <div className={styles.contentWrapper}>
-        <CommunityHeader user={cookies[0].user} setListState={setListState} />
+        <CommunityHeader user={ngoUser} setListState={setListState} />
         {listState === "posts" ? (
-          posts.map((val) => <FeedCard key={val} user={cookies[0].user} />)
+          postList.map((post, idx) => (
+            <FeedCard postData={post} key={idx} user={ngoUser} />
+          ))
         ) : (
           <TransactionLogs />
         )}

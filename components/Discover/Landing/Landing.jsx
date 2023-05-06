@@ -3,13 +3,13 @@ import styles from "./Landing.module.scss";
 import NGOSearchBar from "./NGOSearchBar";
 import SearchFilter from '../SearchFilter/SearchFilter'
 
-function LandingSection() {
+function LandingSection({setSearchName}) {
   return (
     <section className={styles.landingSection}>
       <div className={styles.landingSectionWrapper}>
             <h1>Find the right NGO</h1>
-          <NGOSearchBar />
-          <SearchFilter/>
+          <NGOSearchBar setSearchName={setSearchName} />
+          {/* <SearchFilter/> */}
       </div>
     </section>
   );

@@ -38,19 +38,20 @@ export default function Home() {
                 progress={""}
               />
             ))}
-            {/* <FeedCard
+            <FeedCard
               isAppretiationPost={true}
               appretiationReference={""}
               progress={100}
             />
-            <FeedCard
+            {/* <FeedCard
               isAppretiationPost={true}
               appretiationReference={""}
               progress={40}
-            /> */}
-            {/* <FeedCard media={true} postTitle={"Weekly Goals Achieved"} />
+            />  */}
+            
+            {/* <FeedCard media={true} postTitle={"Weekly Goals Achieved"} /> */}
             <FeedCard requestDonation={true} postTitle={"Need Urgent Help"} />
-            <FeedCard />
+            {/* <FeedCard />
             <FeedCard /> */}
           </div>
           <div className={styles.feedSuggestColumn}>

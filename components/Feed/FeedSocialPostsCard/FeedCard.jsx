@@ -14,7 +14,7 @@ function PostsCard({
   requestDonation,
   postData,
 }) {
-  //console.log("this is postData", postData);
+  console.log("this is postData", postData);
   const [author, setAuthor] = useState();
 
   useEffect(() => {

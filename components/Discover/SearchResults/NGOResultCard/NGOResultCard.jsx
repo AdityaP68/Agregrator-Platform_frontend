@@ -2,21 +2,22 @@ import React from "react";
 import styles from "./NGOResultCard.module.scss";
 import { useRouter } from "next/router";
 
-function NGOResultCard() {
+function NGOResultCard({ ngo }) {
   const router = useRouter();
+  //onsole.log(ngo);
   return (
     <div
       className={styles.cardWrapper}
       onClick={() => {
-        router.push("/discover/ngo/id");
+        router.push(`/discover/ngo/${ngo?._id}`);
       }}
     >
       <div className={styles.credentialsRow}>
         <div className={styles.ngo}>
-          <div className={styles.ngoIcon}></div>
+          <div className={styles.ngoIcon}>N</div>
           <div className={styles.ngoDetails}>
             <div className={styles.name}>
-              <span>Muskaan Foundation</span>| Pune, India
+              <span>{`${ngo?.firstName} ${ngo?.lastName}`}</span>| Pune, India
             </div>
             <small>
               4.8 * <span className={styles.reviews}>68 reviews</span>
@@ -24,10 +25,10 @@ function NGOResultCard() {
           </div>
         </div>
         <div className={styles.keyValue}>
-          <span>Credibility Rating:</span> 9/10
+          <span>Credibility Rating:</span> 7/10
         </div>
         <div className={styles.keyValue}>
-          <span>Activity Points</span> 24000+
+          <span>Activity Points</span> 100
         </div>
         <div className={styles.actionsContainer}>
           <div className={styles.actionsIcon}>
@@ -47,21 +48,11 @@ function NGOResultCard() {
       <div className={styles.descriptionRow}>
         <div className={styles.description}>
           <small>Description</small>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            magnam unde quidem accusantium, nam quas voluptates esse veniam
-            reiciendis debitis ipsam amet sapiente officia deserunt vel totam
-            odio soluta. Molestias!
-          </p>
+          <p>{ngo?.decription || "NA"}</p>
         </div>
         <div className={styles.description}>
           <small>About</small>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            magnam unde quidem accusantium, nam quas voluptates esse veniam
-            reiciendis debitis ipsam amet sapiente officia deserunt vel totam
-            odio soluta sapiente officia des. Molestias!
-          </p>
+          <p>{ngo?.about || "NA"}</p>
         </div>
       </div>
     </div>

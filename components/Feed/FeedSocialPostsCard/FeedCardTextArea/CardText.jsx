@@ -9,10 +9,10 @@ function FeedCardText({
   isAppretiationPost,
   progress,
   requestDonation,
-  postData
+  postData,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const text = postData?.description || 'no description' ;
+  const text = postData?.description || "no description";
 
   const truncatedText = truncateString(text, 150);
   const shouldTruncate = truncatedText !== text;
@@ -31,7 +31,7 @@ function FeedCardText({
               {isExpanded ? "Read Less" : "Read More"}
             </button>
           )}
-          {requestDonation && <DonationCard style={{marginTop: '1.5rem'}}/>}
+          {requestDonation && <DonationCard style={{ marginTop: "1.5rem" }} />}
         </>
       ) : (
         <AppretiationPostText progress={progress}>

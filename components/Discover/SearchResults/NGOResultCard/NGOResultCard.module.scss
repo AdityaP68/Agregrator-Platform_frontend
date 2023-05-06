@@ -19,7 +19,11 @@
     .ngoIcon {
       height: 38px;
       width: 38px;
-      background-color: var(--grey-shade-links);
+      background-color: #3c37ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
       border-radius: 5px;
     }
     .ngoDetails {
@@ -59,6 +63,7 @@
     display: flex;
     gap: 1.5rem;
     color: rgb(55, 55, 55);
+    min-width: 50%;
     small {
       align-self: center;
       font-size: 0.95rem;
